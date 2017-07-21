@@ -138,6 +138,9 @@ angular.module('Bastion.components').factory('Nutupane',
                     table.working = false;
                     table.refreshing = false;
                     table.initialLoad = false;
+                }).$promise.catch(function() {
+                    table.working = false;
+                    table.refreshing = false;
                 });
 
                 return deferred.promise;
